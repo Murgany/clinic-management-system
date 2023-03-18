@@ -1,0 +1,31 @@
+
+{% block content %}
+<div class="content">
+
+    <div class="card-bod car table-responsive p-0">
+        <table id="result_list" class="table table-striped">
+            <thead>
+            <tr>
+                <th>
+                    <div class="text"><a href="#">total</a>&emsp;</div>
+                    <div class="text"><a href="#">total_patients</a>&emsp;</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr role="row" class="{% cycle 'even' 'odd' %} plusDivs">
+                <td>{{ summary.total }}</td>
+                <td>{{ summary.total_patients }}</td>
+            </tr>
+
+            </tbody>
+            <tr style="font-weight: bold;">
+                <td> Total</td>
+                <td> {{ summary_total.total | default:0 }}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+{% endblock %}
