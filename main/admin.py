@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Doctor, Patient, Appointment, PatientSummary
 from django.contrib.auth.models import User, Group
 
+
 class PatientAdmin(admin.ModelAdmin):
     list_display = ['patient_name', 'age', 'gender', 'mobile', 'date', 'next_appointment', 'doctor',]
     search_fields = ['patient_name', 'doctor']

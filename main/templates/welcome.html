@@ -1,8 +1,10 @@
-{% extends 'base.html' %} {% load static %} {% block body %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block body %}
 
-<div class="container-fluid">
-    <div class="row mt-3">
-      <div class="col-6">
+<div class="container-fluid bg">
+    <div class="row pt-3">
+        <div class="col">
           <span class="circles">
               <div class="circle1"></div>
               <div class="circle2"></div>
@@ -16,42 +18,23 @@
               />
           </span>
       </div>
-      <div class="col-6">
-          <a class="btn btn-sm btn-primary btn-simple float-right" href="/admin">ADMIN</a>
+
+      <div class="col" >
+          <a class="btn btn-sm btn-primary btn-simple text-right animation-on-hover float-right" href="/admin">ADMIN</a>
       </div>
     </div>
 
-  <div class="row d-fle justify-content-center text-center" >
-    <div class="mt-">
-      <style>
-        @media screen and (max-width:360px){
-          .header {
-          margin-top: 15%;
-         }
-        }
-
-        @media screen and (min-width:361px){
-          .header {
-          margin-top: 25%;
-         }
-        }
-
-        @media screen and (min-width:600px){
-          .header {
-          margin-top: 65%;
-         }
-        }
-      </style>
-      
-        <h2 class="card-title header">Dr MINA</h2>
-        <h4 class="card-category mt">Clinic management system</h4>
-
-         <div class="row text-center justify-content-center mt- pt-" style="margin-top: 67%;">
+  <div class="row justify-content-center text-center">
+    <div class="col-12">
+        <h1 class="card-title heade mt-5 pt-5">Dr MINA</h1>
+        <h3 class="card-category mt-5">Clinic management system</h3>
+         <div class="mt-5 text-center d-flex justify-content-center">
           {% if user.is_authenticated %}
-           <div class="mt-5 col-sm-6"><a class="btn-sm btn-primary" href="{% url 'logout' %}">LOGOUT</a></div>
+           <div class="mt-5 col-sm-6 justify-content-center">
+            <a class="btn btn-sm btn-primary" href="{% url 'logout' %}">LOGOUT</a></div>
           {% else %}
-          <a class="btn-sm btn-primary" href="{% url 'admin:login' %}">LOGIN</a>
-         &emsp; <a class="btn-sm btn-primary" href="{% url 'auth_signup' %}">SIGNUP</a>
+          <a class="btn btn-sm btn-primary" href="{% url 'admin:login' %}">LOGIN</a>
+           &emsp; <a class="btn btn-sm btn-primary" href="{% url 'auth_signup' %}">SIGNUP</a>
           {% endif %}
           </div>
     </div>

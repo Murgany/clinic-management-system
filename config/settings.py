@@ -11,7 +11,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-
 # Application definition
 
 
@@ -47,6 +46,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
     # ...
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -115,32 +115,33 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_TZ = True
-
-USE_L10N = True
-
 import os
 from django.utils.translation import gettext_lazy as _
 
+TIME_ZONE = 'UTC'
+USE_TZ = True
+USE_L10N = True
+USE_I18N = True
+
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
  
+LANGUAGE_CODE = 'ar'
+
 LANGUAGES = [
-    ('ar', _('Arabic')),
-    ('en', _('English')),
+    ('ar', ('Arabic')),
+    ('en', ('English')),
 ]
+
+# Languages using BiDi (right-to-left) layout
+LANGUAGES_BIDI = ["ar"]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
-# MEDIA_URL = BASE_DIR / 'media'
+# MEDIA_URL = BASE_DIR , 'media'
 MEDIA_URL = os.path.join(BASE_DIR, 'media/')
 MEDIA_ROOT = BASE_DIR / 'media'
 

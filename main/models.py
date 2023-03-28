@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
-departments = [('Cardiologist', 'Cardiologist'),
+departments = [
+               ('Cardiologist', 'Cardiologist'),
                ('Dermatologists', 'Dermatologists'),
                ('Emergency Medicine Specialists', 'Emergency Medicine Specialists'),
                ('Allergists/Immunologists', 'Allergists/Immunologists'),
@@ -11,12 +12,12 @@ departments = [('Cardiologist', 'Cardiologist'),
                ]
 
 class Doctor(models.Model):
-    user = models.OneToOneField(User,  on_delete=models.CASCADE)
+    user = models.OneToOneField(User, verbose_name=_("Doctor's Name"), on_delete=models.CASCADE)
     profile_picture = models.ImageField(_('Profile photo'), upload_to='profile_pic/', null=True, blank=True)
     address = models.CharField(_('Address'), max_length=40)
     mobile = models.CharField(_('Phone'), max_length=20, null=True)
     department = models.CharField(_('Speciality'), max_length=50, choices=departments, default='Cardiologist')
-    status = models.BooleanField(default=False)
+    status = models.BooleanField(default=False, verbose_name=_('Status: Active / Not active'))
 
     @property
     def get_name(self):
@@ -25,7 +26,7 @@ class Doctor(models.Model):
     @property
     def get_id(self):
         return self.user.id
-    
+
     class Meta:
         verbose_name = _('Doctor')
         verbose_name_plural = _('Doctors')
@@ -36,7 +37,7 @@ class Doctor(models.Model):
 
 class Patient(models.Model):
     # doctor = models.ManyToManyField(Doctor, default=User.first_name)
-    doctor = models.CharField(_('Doctor'), max_length=120, null=True)
+    doctor = models.CharField(_("Doctor's Name"), max_length=120, null=True)
     date = models.DateField(_('Date'), auto_now=True, blank=True)
     # doctor_id = models.PositiveIntegerField(null=True)
     patient_name = models.CharField(_('Patient name'), max_length=100, null=False)
@@ -77,7 +78,7 @@ class Appointment(models.Model):
     date = models.DateField(_('Date'), auto_now=True)
     date_of_appointment = models.DateTimeField(_('Date of appointment'), auto_now_add=False, null=False)
     # doctor = models.OneToOneField(Doctor, auto_created=True ,on_delete=models.CASCADE, null=True)
-    doctor = models.ManyToManyField(_('Doctor'), max_length=100, null=True)
+    doctor = models.ManyToManyField(Doctor, verbose_name=_("Doctor's Name"), max_length=100, null=True)
     department = models.CharField(_('Speciality'), max_length=50, choices=departments, default='Cardiologist')
     patient_full_name = models.CharField(_('Patient name'), max_length=100, null=True)
     age = models.PositiveIntegerField(_('Age'), null=True)
@@ -96,7 +97,7 @@ class Appointment(models.Model):
     class Meta:
         verbose_name = _('Appointment')
         verbose_name_plural = _('Appointments')
-    
+
 
     def __str__(self):
         return self.patient_full_name

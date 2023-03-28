@@ -2,12 +2,12 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-26 05:01+0200\n"
+"POT-Creation-Date: 2023-03-26 04:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,113 +15,112 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: main/apps.py:7
 msgid "MAIN"
-msgstr "الرئيسية"
+msgstr ""
 
 #: main/models.py:132
 msgid "Profile photo"
-msgstr "صورة شخصية"
+msgstr ""
 
 #: main/models.py:133 main/models.py:169 main/models.py:208
 msgid "Address"
-msgstr "العنوان"
+msgstr ""
 
 #: main/models.py:134 main/models.py:170
 msgid "Phone"
-msgstr "موبايل"
+msgstr ""
 
 #: main/models.py:135 main/models.py:198
 msgid "Speciality"
-msgstr "التخصص"
+msgstr ""
 
 #: main/models.py:136
 msgid "Status: Active / Not active"
-msgstr "الحالة: نشط / غير نشط"
+msgstr ""
 
 #: main/models.py:147
 msgid "Doctor"
-msgstr "دكتور"
+msgstr ""
 
 #: main/models.py:148
 msgid "Doctors"
-msgstr "الدكاترة"
+msgstr ""
 
-#: main/models.py:174
+#: main/models.py:156 main/models.py:197
 msgid "Doctor's Name"
-msgstr "اسم الدكتور"
+msgstr ""
 
 #: main/models.py:157 main/models.py:194
 msgid "Date"
-msgstr "التاريخ"
+msgstr ""
 
 #: main/models.py:159 main/models.py:199
 msgid "Patient name"
-msgstr "اسم المريض"
+msgstr ""
 
 #: main/models.py:160 main/models.py:200
 msgid "Age"
-msgstr "العمر"
+msgstr ""
 
 #: main/models.py:167 main/models.py:207
 msgid "Gender"
-msgstr "النوع"
+msgstr ""
 
 #: main/models.py:171
 msgid "Symptoms"
-msgstr "الاعراض"
+msgstr ""
 
 #: main/models.py:172
 msgid "Diagnosis"
-msgstr "التشخيص"
+msgstr ""
 
 #: main/models.py:173
 msgid "Treatment"
-msgstr "العلاج"
+msgstr ""
 
 #: main/models.py:174
 msgid "Doctors comment"
-msgstr "تعليق الظبيب"
+msgstr ""
 
 #: main/models.py:175
 msgid "Next appointment"
-msgstr "المقابلة القادمة"
+msgstr ""
 
 #: main/models.py:186
 msgid "Patient"
-msgstr "مريض"
+msgstr ""
 
 #: main/models.py:187
 msgid "Patients"
-msgstr "المرضى"
+msgstr ""
 
 #: main/models.py:195
 msgid "Date of appointment"
-msgstr "تاريخ المقابلة"
+msgstr ""
 
 #: main/models.py:209
 msgid "Mobile"
-msgstr "موبايل"
+msgstr ""
 
 #: main/models.py:210
 msgid "Description"
-msgstr "شرح"
+msgstr ""
 
 #: main/models.py:214
 msgid "Appointment"
-msgstr "مقابلة"
+msgstr ""
 
 #: main/models.py:215
 msgid "Appointments"
-msgstr "المقابلات"
+msgstr ""
 
 #: main/models.py:226 main/models.py:227
 #: venv/lib/python3.10/site-packages/admin_black/templates/admin/includes/object_delete_summary.html:5
 msgid "Summary"
-msgstr "ملخص"
+msgstr ""
 
 #: venv/lib/python3.10/site-packages/admin_black/forms.py:8
 msgid "Password"
@@ -355,7 +354,7 @@ msgstr ""
 #: venv/lib/python3.10/site-packages/admin_black/templates/admin/index.html:35
 #: venv/lib/python3.10/site-packages/admin_black/templates/includes/menu-list.html:72
 msgid "Exit"
-msgstr "خروج"
+msgstr ""
 
 #: venv/lib/python3.10/site-packages/admin_black/templates/admin/index.html:71
 msgid "Add"
@@ -452,7 +451,7 @@ msgstr ""
 
 #: venv/lib/python3.10/site-packages/admin_black/templates/includes/menu-list.html:79
 msgid "Logout"
-msgstr "تسجيل خروج"
+msgstr ""
 
 #: venv/lib/python3.10/site-packages/admin_black/templates/includes/navigation.html:46
 msgid "en"

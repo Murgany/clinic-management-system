@@ -2,15 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Doctors System</title>
     <link type="text/css" rel="stylesheet" href="{% static 'styles.css' %}">
+    <link type="text/scss" rel="stylesheet" href="{% static 'dashboard-free.css.map' %}">
+    <title>Doctors System</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="clinic management system">
+    <meta name="keywords" content="clinic, clinic management system">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="container-fluid bg">
 
-<div class="container-fluid m-0 p-0">
+<body class="container-flui ">
+
 {% block body %} {% endblock %}
-</div>
+
+{% block scripts %}
+<!-- <script type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script> -->
+<!-- <script type="text/javascript" src="{% static 'jquery-3.6.1.min.js' %}"></script> -->
+{% endblock %}
 
 </body>
 </html>
