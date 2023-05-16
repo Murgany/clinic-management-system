@@ -3,17 +3,9 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from main.views import welcome
 
+# Set up project urls
 urlpatterns = i18n_patterns(
-    path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('', include('admin_black.urls')),
-    path('__debug__/', include('debug_toolbar.urls')),
-
-    # If no prefix is given, use the default language
-    # prefix_default_language=False
+    path('admin/', admin.site.urls), # Django admin
+    path('', include('main.urls')), # The app (Clinic management system)
+    path('', include('admin_black.urls')), #An open-source django dashboard that I customised further (files are found in black-admin folder inside venv folder)
 )
-
-# urlpatterns = [
-    # path('', welcome, name='welcome'),
-    # path('i18n/', include('django.conf.urls.i18n')),
-#    ]
