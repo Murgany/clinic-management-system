@@ -2,6 +2,10 @@ from django import template
 from django.template.defaultfilters import stringfilter
 from django.conf import settings
  
+ 
+
+#  Function to switch between languages 
+
 def switch_lang_code(path, language):
  
     # Get the supported language codes
