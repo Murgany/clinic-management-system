@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.i18n import i18n_patterns
+from django.conf.urls.i18n import i18n_patterns # For localization and translation
 from main.views import welcome
 
 # Set up project urls
